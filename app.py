@@ -12,12 +12,12 @@ from nltk.tokenize import sent_tokenize
 import config
 from dataset import tokenize_single_resume
 from models import HTVAE
-from explainability import ExplainableRecruitmentSuite, generate_counterfactual
+from explainability import ExplainableResumeAuditSuite, generate_counterfactual
 
 
 st.set_page_config(
-    page_title="XAI Recruitment Suite",
-    page_icon="🤖",
+    page_title="XAI Resume Bias Detection",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -199,7 +199,7 @@ if df_full is None:
 
 st.markdown("""
     <div class="header-card">
-        <div class="header-title">🤖 XAI Recruitment Engine v3.1</div>
+        <div class="header-title">XAI Resume Bias Detection Engine</div>
         <div class="header-subtitle">Hierarchical Latent Autoencoding | Occlusion Sentence Sensitivity | Counterfactual Auditing</div>
     </div>
 """, unsafe_allow_html=True)
@@ -309,7 +309,7 @@ if run_analysis or "run_completed" in st.session_state:
         inputs_dev = {k: v.to(device) for k, v in inputs.items()}
         
 
-        suite = ExplainableRecruitmentSuite(model, tokenizer)
+        suite = ExplainableResumeAuditSuite(model, tokenizer)
         raw_attributions = suite.sentence_level_attribution(
             inputs_dev['input_ids'],
             inputs_dev['attention_mask'],

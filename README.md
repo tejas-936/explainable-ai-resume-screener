@@ -1,6 +1,6 @@
-# XAI Recruitment Suite (HTVAE)
+# XAI Resume Bias Detection (HTVAE)
 
-An Explainable AI Recruitment Engine featuring a Hierarchical Transformer Variational Autoencoder (HTVAE). This suite maps resumes into a latent professional manifold, performs sentence-level sensitivity analyses using occlusion, and conducts counterfactual audits to identify demographic and gender biases.
+An Explainable AI (XAI) tool for auditing and detecting bias in resume representations using a Hierarchical Transformer Variational Autoencoder (HTVAE). This system maps resumes into a latent professional space, performs sentence-level sensitivity analyses using occlusion, and conducts counterfactual audits to identify demographic, ethnic, and gender biases.
 
 ## Features
 - **Hierarchical Encoding**: Tokenizes resumes at both the word level (using DistilBERT embeddings) and the sentence level (using a Transformer Encoder).

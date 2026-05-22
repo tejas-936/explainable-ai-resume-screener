@@ -38,7 +38,7 @@ def generate_counterfactual(text, swap_type):
         cf_text = re.sub(pattern, replacement, cf_text)
     return cf_text
 
-class ExplainableRecruitmentSuite:
+class ExplainableResumeAuditSuite:
     """
     A diagnostic suite for interpreting the representations and fairness of the HTVAE.
     Provides methods for latent space traversals, sentence-level attribution via occlusion,

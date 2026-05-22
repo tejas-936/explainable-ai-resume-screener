@@ -9,7 +9,7 @@ import config
 from dataset import ResumeHierarchicalDataset, hierarchical_collate_fn, tokenize_single_resume
 from models import HTVAE
 from train import train_htvae
-from explainability import ExplainableRecruitmentSuite, generate_counterfactual
+from explainability import ExplainableResumeAuditSuite, generate_counterfactual
 
 def run_preprocess(args):
     """
@@ -142,7 +142,7 @@ def run_audit(args):
     model.to(device)
     model.eval()
 
-    suite = ExplainableRecruitmentSuite(model, tokenizer)
+    suite = ExplainableResumeAuditSuite(model, tokenizer)
 
 
     print("Tokenizing input resume...")
@@ -207,7 +207,7 @@ def run_audit(args):
     print("====================================")
 
 def main():
-    parser = argparse.ArgumentParser(description="XAI Recruitment Suite CLI Runner")
+    parser = argparse.ArgumentParser(description="XAI Resume Bias Detection CLI Runner")
     subparsers = parser.add_subparsers(dest="command", help="Available subcommands")
 
 
