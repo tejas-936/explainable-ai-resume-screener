@@ -1,4 +1,4 @@
-# XAI Resume Bias Detection (HTVAE)
+# XAI Resume Bias Detection
 
 An Explainable AI (XAI) tool for auditing and detecting bias in resume representations using a Hierarchical Transformer Variational Autoencoder (HTVAE). This system maps resumes into a latent professional space, performs sentence-level sensitivity analyses using occlusion, and conducts counterfactual audits to identify demographic, ethnic, and gender biases.
 
